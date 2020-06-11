@@ -52,13 +52,13 @@
     <p>
       <input type="name" id="searchquery" v-on:input="filter_items" placeholder="Search" autocomplete="off">
       <select v-model="activeCategory" v-on:change="filter_items" style="text-align-last: right;">
-        <option value="all">All Categories</option>
+        <option value="All Categories">All Categories</option>
         <option v-for="category in categories" v-bind:value="category">
           {{category}}
         </option>
       </select>
     </p>
-    <div>  
+    <div v-bind:empty-message="'No matching items in '+activeCategory">  
       <shop-item 
         v-for="i in items" 
         v-bind:name="i.Name"

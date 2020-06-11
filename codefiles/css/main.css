@@ -239,22 +239,22 @@ header{
   border-radius: 1mm;
   font-size: 125%;
 }
+#checkout{
+  padding-top: 10mm;
+}
 #checkout button,button.addtocart{
   background: var(--theme);
   color: var(--bg2);
   align-self: start;
-}
-section{
-  height: 100%;
-  overflow-y: scroll;
 }
 
 #shop{
   padding: 0;
   display: grid;
   grid-template-rows: auto 1fr;
-  height: 100vh;
-  overflow-y: hidden;
+  height: 100%;
+  min-height: 100vh;
+  padding-bottom: 20mm;
 }
 #shop>p{
   background: var(--bg2);
@@ -264,6 +264,11 @@ section{
   margin: 0;
   padding: 15mm 3mm 2mm 3mm;
   box-shadow: 0 0.25mm 2mm rgba(0,0,0,0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
 }
 #shop>p>input,#shop>p>select{
   display: inline-block;
@@ -284,11 +289,14 @@ section{
 }
 
 #shop>div{
-  padding: 5mm;
+  padding: 30mm 5mm 0mm 5mm;
   height: 100%;
   overflow-y: scroll;
-  padding-bottom: 60mm; 
 }
+#shop>div:empty::before{
+  content: attr(empty-message);
+}
+
 select{
   text-align: right;
 }

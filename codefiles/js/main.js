@@ -104,7 +104,7 @@ function items_loaded(){
       cartpage: false,
       name: '',
       page: '',
-      activeCategory: 'all',
+      activeCategory: 'All Categories',
     },
     computed: {
       carttotal: function(){
@@ -146,7 +146,7 @@ function items_loaded(){
           if(query && !target.includes(query)){
             app.items[i].match = false;
           }
-          if(this.activeCategory!='all' && this.activeCategory!=items[i].Category){
+          if(this.activeCategory!='All Categories' && this.activeCategory!=items[i].Category){
             app.items[i].match = false;
           }
         }
