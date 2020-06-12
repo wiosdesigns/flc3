@@ -32,17 +32,18 @@
     <a href="#home">
       <img src="/codefiles/assets/logotext.png">
     </a>
-    <a href="#shop" v-if="page=='home'" style="color: var(--theme);">
-      SHOP
-    </a>
-    <a href="#home" v-else style="color: var(--theme);">
+    <a href="#home" v-if="page=='shop'" style="color: var(--theme);">
       HOME
+    </a>
+    <a href="#shop" v-else style="color: var(--theme);">
+      SHOP
     </a>
   </header>
   <section id="home" class="hnav">
     <h3>
       Setup an ecommerce website and receive orders
-      on WhatsApp 
+      on WhatsApp
+      <br> 
     </h3>
     <a href="#shop" class="btn">See Demo</a>
     
